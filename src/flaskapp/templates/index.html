@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet/index.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>h3s client</title>
+</head>
+<body>
+
+<div class="main_content">
+    <button id= "left-button" class="left-right-button">Previous</button>
+    <div class="main_content_wrapper">
+        <p class="blog_post_path">
+            ID Range (0 - <span id="maximum-entry-id-span">?</span>) <input id="entry-id-textfield"> <button id="first-button">First</button> <button id="last-button">Last</button>
+        </p>
+        <p class="blog_post_path">
+            System
+        </p>
+        <textarea id="system-textarea" rows=2 class="blog_post"></textarea>
+        <p class="blog_post_path">
+            User
+        </p>
+        <textarea id="user-textarea" rows=6 class="blog_post"></textarea>
+        <p class="blog_post_path">
+            Assistant
+        </p>
+        <textarea id="assistant-textarea" rows=12 class="blog_post"></textarea>
+        <button id="save-button" class="bottom-button">Save</button>
+    </div>
+    <button id="right-button" class="left-right-button">Next</button>
+</div>
+
+<script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
+
+</body>
+</html>
